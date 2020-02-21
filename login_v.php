@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$pdo = new PDO('mysql:host=localhost;dbname=master-projekt-db2', 'master-projekt-db2', 'Xj41t^h3');
+$pdo = new PDO('mysql:host=localhost;dbname=hammes', 'hammes', 'mango');
  
 if(isset($_GET['login'])) {
     $email = $_POST['E-Mail'];
@@ -10,12 +10,12 @@ if(isset($_GET['login'])) {
     $result = $statement->execute(array('email' => $email));
     $user = $statement->fetch();
         
-    Überprüfung des Passworts
+    ï¿½berprï¿½fung des Passworts
     if ($user !== false && password_verify($passwort, $user['PW'])) {
         $_SESSION['userid'] = $user['id'];
         die('Login erfolgreich. Weiter zu <a href="geheim.php">internen Bereich</a>');
     } else {
-        $errorMessage = "E-Mail oder Passwort war ungültig<br>";
+        $errorMessage = "E-Mail oder Passwort war ungï¿½ltig<br>";
     }
 
     
@@ -25,7 +25,8 @@ if(isset($_GET['login'])) {
 <!DOCTYPE html> 
 <html> 
 <head>
-  <title>Login</title>    
+  <title>Login</title>
+    <meta charset="UTF-8">
 </head> 
 <body>
  
