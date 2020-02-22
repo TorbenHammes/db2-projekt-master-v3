@@ -1,5 +1,5 @@
 <?php
-$dblink=new mysqli('localhost','hammes','hammes','mango');
+include("./db.php");
 
 function kopfbereich() {
 print '<html>

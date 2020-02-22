@@ -1,5 +1,6 @@
 <?php
-$dblink = new mysqli('localhost', 'hammes', 'mango', 'hammes');
+
+include("./db.php");
 
 $seller = $_GET['seller'];
 $sql = "select * from TBL_Verkaeufer where v_nickname=$seller";

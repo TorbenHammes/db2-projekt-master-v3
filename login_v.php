@@ -1,6 +1,7 @@
 <?php 
 session_start();
-$pdo = new PDO('mysql:host=localhost;dbname=hammes', 'hammes', 'mango');
+
+include("./db.php");
  
 if(isset($_GET['login'])) {
     $email = $_POST['E-Mail'];

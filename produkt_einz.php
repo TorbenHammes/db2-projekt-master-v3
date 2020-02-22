@@ -1,9 +1,10 @@
 <?php
-$dblink = new mysqli('localhost', 'hammes', 'mango', 'hammes');
+
+include("./db.php");
 
 $pid = $_GET['pid'];
 $sql = "select * from TBL_Verkaeufer_Produkt where P_ID=$pid";
-if ($result = $dblink->query($sql)) {
+if ($result = $pdo->query($sql)) {
     $row = $result->fetch_row();
     $nickname = $row[1];
     $pname = $row[2];

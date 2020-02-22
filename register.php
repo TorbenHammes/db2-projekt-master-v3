@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$pdo = new PDO('mysql:host=localhost;dbname=hammes', 'hammes', 'mango');
+include("./db.php");
 ?>
 <!DOCTYPE html> 
 <html> 
