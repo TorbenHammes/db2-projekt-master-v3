@@ -4,7 +4,7 @@ include("./db.php");
 
 $pid = $_GET['pid'];
 $sql = "select * from TBL_Verkaeufer_Produkt where P_ID=$pid";
-if ($result = $pdo->query($sql)) {
+if ($result = $dblink->query($sql)) {
     $row = $result->fetch_row();
     $nickname = $row[1];
     $pname = $row[2];
@@ -34,6 +34,9 @@ $preisf = number_format($preis, 2, ',', ' ');
             <li>Produktverkäufer: <a href="./verk.php?seller=<?php print_r($nickname); ?>"><?php print_r($nickanem); ?></a></li>
         </ul>
         <img src="<?php print_r($bild); ?>" class="img-fluid" alt="Produktbild">
+		
+		<a href="#" onclick="history.back();">Zurück</a>
+	</div>
 </main>
 
 

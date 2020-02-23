@@ -1,7 +1,7 @@
 <html>
 
 <?php
-$dblink=new mysqli('localhost','hammes','mango','hammes');
+include("./db.php");
 
 ?>
 
@@ -11,7 +11,7 @@ Produktname<br>
 <input name=produktname><br>
 Verkaeufer<br>
 <input name=v_nickname><br>
-Preis in €<br>
+Preis in ?<br>
 <input name=preis type=number><br>
 Kategorie<br>
 <input name=kategorietype=number><br>

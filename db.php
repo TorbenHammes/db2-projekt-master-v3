@@ -1,3 +1,3 @@
 <?php
-$pdo=new PDO('localhost', 'hammes', 'mango', 'hammes');
+$dblink=new mysqli('localhost', 'master-projekt-db2', 'Xj41t^h3', 'master-projekt-db2');
 ?>

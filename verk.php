@@ -31,6 +31,7 @@ if ($result = $dblink->query($sql)) {
             <li>Telefonnummer: <?php print_r($tel); ?></li>
         </ul>
         <img src="<?php print_r($bild); ?>" class="img-fluid" alt="Produktbild">
+	</div>
 </main>
 
 </body>

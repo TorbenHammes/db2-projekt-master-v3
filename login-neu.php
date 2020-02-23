@@ -1,33 +1,29 @@
 <?php 
 session_start();
-
-include("./db.php");
+include('./db.php');
  
 if(isset($_GET['login'])) {
-    $email = $_POST['E-Mail'];
-    $passwort = $_POST['PW'];
+    $email = $_POST['email'];
+    $passwort = $_POST['passwort'];
     
-    $statement = $pdo->prepare("SELECT * FROM TBL_K_Zugang WHERE email = :E-Mail");
+    $statement = $dblink->prepare("SELECT * FROM users WHERE email = :email");
     $result = $statement->execute(array('email' => $email));
     $user = $statement->fetch();
         
-    �berpr�fung des Passworts
-    if ($user !== false && password_verify($passwort, $user['PW'])) {
+    //Überprüfung des Passworts
+    if ($user !== false && password_verify($passwort, $user['passwort'])) {
         $_SESSION['userid'] = $user['id'];
         die('Login erfolgreich. Weiter zu <a href="geheim.php">internen Bereich</a>');
     } else {
-        $errorMessage = "E-Mail oder Passwort war ung�ltig<br>";
+        $errorMessage = "E-Mail oder Passwort war ungültig<br>";
     }
-
     
 }
 ?>
-
 <!DOCTYPE html> 
 <html> 
 <head>
-  <title>Login</title>
-    <meta charset="UTF-8">
+  <title>Login</title>    
 </head> 
 <body>
  

@@ -17,7 +17,9 @@ include("./db.php");
     while ($row=$result->fetch_row()) {
       print "<tr><td>$row[2]</td><td>$row[1]</td><td>$row[3]</td><td> $row[4]</td>
      
-      <td><a href=\"./produkt_einz.php?pid=$row[0]\">Mehr Informationen</a></td>
+      <td><a href=\"produkt_einz.php?pid=$row[0]\">Mehr Informationen</a></td>
+	  <td><a href=\"prod_del.php?pid=$row[0]\">Produkt löschen</a></td>
+	  <td><a href=\"prod_upd.php?pid=$row[0]\">Produkt ändern</a></td>
       </tr>\n";
     } 
   
@@ -28,7 +30,7 @@ include("./db.php");
 </table>
 </main>
 	
-<button onclick="window.location.href='./produktliste_admin.php'">Admin-Produktseite</button>
+<button onclick="window.location.href='./prod_add.php'">Produkt hinzufügen</button>
 
 
 </body>

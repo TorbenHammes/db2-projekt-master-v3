@@ -1,10 +1,10 @@
 <?php
-$dblink=new mysqli('localhost','hammes','mango','hammes');
+include("./db.php");
 ?>
 
 <html>
 <head>
-<meta http-equiv="refresh" content="0; URL=produktliste.php">
+<meta http-equiv="refresh" content="0"; URL="produktliste.php">
 </head>
 <?php
 
