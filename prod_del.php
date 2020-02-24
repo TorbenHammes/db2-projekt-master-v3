@@ -1,6 +1,6 @@
 <html>
 <head>
-<meta http-equiv="refresh" content="0"; URL="produktliste.php">
+<meta http-equiv="refresh" content='0;URL=produktliste_admin.php'>
 </head>
 <?php
 

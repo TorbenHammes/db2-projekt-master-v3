@@ -15,7 +15,7 @@ include("./db.php");
 
   if ($result= $dblink->query($sql)) {
     while ($row=$result->fetch_row()) {
-      print "<tr><td>$row[2]</td><td>$row[1]</td><td>$row[3]</td><td> $row[4]</td>
+      print "<tr><td>$row[2]</td><td><a href=\"./verk.php?seller=$row[1]\">$row[1]</a></td><td>$row[3]</td><td> $row[4]</td>
      
       <td><a href=\"./produkt_einz.php?pid=$row[0]\">Mehr Informationen</a></td>
       </tr>\n";
@@ -27,7 +27,7 @@ include("./db.php");
 
 </table>
 </main>
-	
+<br>	
 <button onclick="window.location.href='./produktliste_admin.php'">Admin-Produktseite</button>
 
 
