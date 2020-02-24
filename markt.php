@@ -8,7 +8,7 @@
 <body>
 <button onclick="window.location.href='./produktliste.php'">Zeig mir alle verfügbaren Produkte!</button>
 <button onclick="window.location.href='./locations.php'">Zeig mir alle verfügbaren Stände!</button>
-<button onclick="window.location.href='./sellerliste.php'">Zeig mir alle Verkäufer!</button>
+<button onclick="window.location.href='./sellerliste.php'">Zeig mir alle User!</button>
 
 </body>
 </html>
